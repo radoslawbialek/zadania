@@ -1,7 +1,8 @@
-package pl.radoslawbialek.notatnik
+package pl.radoslawbialek.notatnik.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import pl.radoslawbialek.notatnik.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
