@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <View
+        android:id="@+id/priorityView"
+        android:layout_width="4dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/completionCheckBox"
+        android:layout_alignBottom="@id/completionCheckBox"
+        android:layout_alignParentStart="true"
+        android:background="@color/red" />
+
+    <CheckBox
+        android:id="@+id/completionCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/priorityView"
+        android:minWidth="0dp"
+        android:minHeight="0dp" />
+
+    <TextView
+        android:id="@+id/text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/completionCheckBox"
+        android:layout_alignBottom="@id/completionCheckBox"
+        android:layout_toEndOf="@id/completionCheckBox"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        tools:text="Przykładowe zadanie" />
+
+</RelativeLayout>
