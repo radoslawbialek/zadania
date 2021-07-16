@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="menu_action_search"
+        android:id="@+id/menu_action_search"
         android:icon="@drawable/ic_baseline_search_24"
         android:title="@string/menu_action_search"
-        app:ActionViewClass="androidx.appcompat.widget.SearchView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="always|collapseActionView"
         tools:ignore="AlwaysShowAction" />
 
