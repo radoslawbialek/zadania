@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Notatnik</string>
+    <string name="app_name">Notepad</string>
+
+    <!-- MENU ================================================================================== -->
+
+    <string name="menu_action_search">Search</string>
+    <string name="menu_action_sort">Sort</string>
+    <string name="menu_action_sort_by_name">Sort by name</string>
+    <string name="menu_action_sort_by_date">Sort by date</string>
+    <string name="menu_action_hide_completed">Hide completed</string>
+    <string name="menu_action_delete_completed">Delete completed</string>
+
 </resources>
