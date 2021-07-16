@@ -6,29 +6,29 @@
     android:padding="8dp">
 
     <View
-        android:id="@+id/priorityView"
+        android:id="@+id/itemTaskPriorityView"
         android:layout_width="4dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/completionCheckBox"
-        android:layout_alignBottom="@id/completionCheckBox"
+        android:layout_alignTop="@id/itemTaskCompletionCheckBox"
+        android:layout_alignBottom="@id/itemTaskCompletionCheckBox"
         android:layout_alignParentStart="true"
         android:background="@color/red" />
 
     <CheckBox
-        android:id="@+id/completionCheckBox"
+        android:id="@+id/itemTaskCompletionCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/priorityView"
+        android:layout_toEndOf="@id/itemTaskPriorityView"
         android:minWidth="0dp"
         android:minHeight="0dp" />
 
     <TextView
-        android:id="@+id/text_view_name"
+        android:id="@+id/itemTaskNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/completionCheckBox"
-        android:layout_alignBottom="@id/completionCheckBox"
-        android:layout_toEndOf="@id/completionCheckBox"
+        android:layout_alignTop="@id/itemTaskCompletionCheckBox"
+        android:layout_alignBottom="@id/itemTaskCompletionCheckBox"
+        android:layout_toEndOf="@id/itemTaskCompletionCheckBox"
         android:ellipsize="end"
         android:gravity="center_vertical"
         android:maxLines="1"
