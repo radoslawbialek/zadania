@@ -16,17 +16,18 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import pl.radoslawbialek.notatnik.R
 import pl.radoslawbialek.notatnik.data.SortOrder
+import pl.radoslawbialek.notatnik.data.Task
 import pl.radoslawbialek.notatnik.util.onQueryTextChanged
 
 @AndroidEntryPoint
-class TasksFragment : Fragment(R.layout.fragment_tasks) {
+class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClickListener {
 
     private val viewModel: TasksViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val taskAdapter = TasksAdapter()
+        val taskAdapter = TasksAdapter(this)
         val tasksRecyclerView = getView()?.findViewById<RecyclerView>(R.id.tasksRecyclerView)
         tasksRecyclerView?.apply {
             adapter = taskAdapter
@@ -39,6 +40,14 @@ class TasksFragment : Fragment(R.layout.fragment_tasks) {
         }
 
         setHasOptionsMenu(true)
+    }
+
+    override fun onItemClick(task: Task) {
+        viewModel.onTaskSelected(task)
+    }
+
+    override fun onCheckBoxClick(task: Task, isChecked: Boolean) {
+        viewModel.onTaskCheckedChanged(task, isChecked)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

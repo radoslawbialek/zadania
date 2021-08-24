@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.launch
 import pl.radoslawbialek.notatnik.data.PreferencesManager
 import pl.radoslawbialek.notatnik.data.SortOrder
+import pl.radoslawbialek.notatnik.data.Task
 import pl.radoslawbialek.notatnik.data.TaskDao
 
 class TasksViewModel @ViewModelInject constructor(
@@ -28,6 +29,8 @@ class TasksViewModel @ViewModelInject constructor(
         taskDao.getTasks(searchQuery, filterPreferences.sortOrder, filterPreferences.hideCompleted)
     }
 
+    val tasks = tasksFlow.asLiveData()
+
     fun onSortOrderSelected(sortOrder: SortOrder) = viewModelScope.launch {
         preferencesManager.updateSortOrder(sortOrder)
     }
@@ -36,5 +39,11 @@ class TasksViewModel @ViewModelInject constructor(
         preferencesManager.updateHideCompleted(hideCompleted)
     }
 
-    val tasks = tasksFlow.asLiveData()
+    fun onTaskSelected(task: Task) {
+
+    }
+
+    fun onTaskCheckedChanged(task: Task, isChecked: Boolean) = viewModelScope.launch {
+        taskDao.update(task.copy(completion = isChecked))
+    }
 }
