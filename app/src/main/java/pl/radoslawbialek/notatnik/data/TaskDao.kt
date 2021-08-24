@@ -2,7 +2,6 @@ package pl.radoslawbialek.notatnik.data
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
-import pl.radoslawbialek.notatnik.ui.tasks.SortOrder
 
 @Dao
 interface TaskDao {
