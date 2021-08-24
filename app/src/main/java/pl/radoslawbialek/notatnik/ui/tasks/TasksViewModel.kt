@@ -6,6 +6,7 @@ import androidx.lifecycle.asLiveData
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
+import pl.radoslawbialek.notatnik.data.SortOrder
 import pl.radoslawbialek.notatnik.data.TaskDao
 
 class TasksViewModel @ViewModelInject constructor(
@@ -26,8 +27,4 @@ class TasksViewModel @ViewModelInject constructor(
     }
 
     val tasks = tasksFlow.asLiveData()
-}
-
-enum class SortOrder {
-    BY_NAME, BY_DATE
 }
