@@ -74,11 +74,13 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
                             }.show()
                     }
                     is TasksViewModel.TasksEvent.NavigateToAddTaskScreen -> {
-                        val action = TasksFragmentDirections.actionTasksFragmentToEditTaskFragment()
+                        val action =
+                            TasksFragmentDirections.actionTasksFragmentToEditTaskFragment(null, "Dodaj zadanie")
                         findNavController().navigate(action)
                     }
                     is TasksViewModel.TasksEvent.NavigateToEditTaskScreen -> {
-                        val action = TasksFragmentDirections.actionTasksFragmentToEditTaskFragment(event.task)
+                        val action =
+                            TasksFragmentDirections.actionTasksFragmentToEditTaskFragment(event.task, "Edytuj zadanie")
                         findNavController().navigate(action)
                     }
                 }.exhaustive
