@@ -12,6 +12,8 @@ import pl.radoslawbialek.notatnik.data.PreferencesManager
 import pl.radoslawbialek.notatnik.data.SortOrder
 import pl.radoslawbialek.notatnik.data.Task
 import pl.radoslawbialek.notatnik.data.TaskDao
+import pl.radoslawbialek.notatnik.ui.ADD_TASK_RESULT_OK
+import pl.radoslawbialek.notatnik.ui.EDIT_TASK_RESULT_OK
 
 class TasksViewModel @ViewModelInject constructor(
     private val taskDao: TaskDao,
@@ -64,9 +66,21 @@ class TasksViewModel @ViewModelInject constructor(
         tasksEventChannel.send(TasksEvent.NavigateToAddTaskScreen)
     }
 
+    fun onEditResult(result: Int) {
+        when (result) {
+            ADD_TASK_RESULT_OK -> showTaskSavedConfirmationMessage("Dodano zadanie")
+            EDIT_TASK_RESULT_OK -> showTaskSavedConfirmationMessage("Zmieniono zadanie")
+        }
+    }
+
+    private fun showTaskSavedConfirmationMessage(text: String) = viewModelScope.launch {
+        tasksEventChannel.send(TasksEvent.ShowTaskSavedConfirmationMessage(text))
+    }
+
     sealed class TasksEvent {
         object NavigateToAddTaskScreen : TasksEvent()
         data class NavigateToEditTaskScreen(val task: Task) : TasksEvent()
         data class ShowUndoDeleteTaskMessage(val task: Task) : TasksEvent()
+        data class ShowTaskSavedConfirmationMessage(val message: String) : TasksEvent()
     }
 }

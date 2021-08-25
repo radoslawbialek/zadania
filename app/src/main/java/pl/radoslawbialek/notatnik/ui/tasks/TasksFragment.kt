@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -60,12 +61,17 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
             viewModel.onAddNewTaskClick()
         }
 
+        setFragmentResultListener("edit_request") { _, bundle ->
+            val result = bundle.getInt("edit_result")
+            viewModel.onEditResult(result)
+        }
+
         viewModel.tasks.observe(viewLifecycleOwner) {
             taskAdapter.submitList(it)
         }
 
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
-            viewModel.tasksEvent.collect() { event ->
+            viewModel.tasksEvent.collect { event ->
                 when (event) {
                     is TasksViewModel.TasksEvent.ShowUndoDeleteTaskMessage -> {
                         Snackbar.make(requireView(), "Usunięto zadanie", Snackbar.LENGTH_LONG)
@@ -82,6 +88,9 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
                         val action =
                             TasksFragmentDirections.actionTasksFragmentToEditTaskFragment(event.task, "Edytuj zadanie")
                         findNavController().navigate(action)
+                    }
+                    is TasksViewModel.TasksEvent.ShowTaskSavedConfirmationMessage -> {
+                        Snackbar.make(requireView(), event.message, Snackbar.LENGTH_SHORT).show()
                     }
                 }.exhaustive
             }
