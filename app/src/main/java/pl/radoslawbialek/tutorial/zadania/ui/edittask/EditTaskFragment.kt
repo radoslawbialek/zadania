@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.ui.edittask
+package pl.radoslawbialek.tutorial.zadania.ui.edittask
 
 import android.os.Bundle
 import android.view.View
@@ -17,8 +17,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
-import pl.radoslawbialek.notatnik.R
-import pl.radoslawbialek.notatnik.util.exhaustive
+import pl.radoslawbialek.tutorial.R
+import pl.radoslawbialek.tutorial.zadania.util.exhaustive
 
 @AndroidEntryPoint
 class EditTaskFragment : Fragment(R.layout.fragment_edit_task) {

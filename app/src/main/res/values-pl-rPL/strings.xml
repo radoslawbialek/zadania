@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Notatnik</string>
+    <string name="app_name">Zadania</string>
     <string name="menu_action_search">Szukaj</string>
     <string name="menu_action_sort">Sortuj</string>
     <string name="menu_action_sort_by_name">Sortuj wg nazwy</string>

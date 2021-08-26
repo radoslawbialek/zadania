@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.ui.tasks
+package pl.radoslawbialek.tutorial.zadania.ui.tasks
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +9,8 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import pl.radoslawbialek.notatnik.R
-import pl.radoslawbialek.notatnik.data.Task
+import pl.radoslawbialek.tutorial.R
+import pl.radoslawbialek.tutorial.zadania.data.Task
 
 class TasksAdapter(private val listener: OnItemClickListener) :
     ListAdapter<Task, TasksAdapter.TasksViewHolder>(DiffCallback()) {

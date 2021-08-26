@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.data
+package pl.radoslawbialek.tutorial.zadania.data
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow

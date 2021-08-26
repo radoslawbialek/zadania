@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="pl.radoslawbialek.notatnik.ui.tasks.TasksFragment"
+        android:name="pl.radoslawbialek.tutorial.zadania.ui.tasks.TasksFragment"
         android:label="Zadania"
         tools:layout="@layout/fragment_tasks">
         <action
@@ -16,13 +16,13 @@
     </fragment>
     <fragment
         android:id="@+id/editTaskFragment"
-        android:name="pl.radoslawbialek.notatnik.ui.edittask.EditTaskFragment"
+        android:name="pl.radoslawbialek.tutorial.zadania.ui.edittask.EditTaskFragment"
         android:label="{title}"
         tools:layout="@layout/fragment_edit_task">
         <argument
             android:name="task"
             android:defaultValue="@null"
-            app:argType="pl.radoslawbialek.notatnik.data.Task"
+            app:argType="pl.radoslawbialek.tutorial.zadania.data.Task"
             app:nullable="true" />
         <argument
             android:name="title"
@@ -30,7 +30,7 @@
     </fragment>
     <dialog
         android:id="@+id/deleteAllCompletedDialogFragment"
-        android:name="pl.radoslawbialek.notatnik.ui.deleteallcompleted.DeleteAllCompletedDialogFragment"
+        android:name="pl.radoslawbialek.tutorial.zadania.ui.deleteallcompleted.DeleteAllCompletedDialogFragment"
         android:label="DeleteAllCompletedDialogFragment" />
     <action
         android:id="@+id/action_global_deleteAllCompletedDialogFragment"

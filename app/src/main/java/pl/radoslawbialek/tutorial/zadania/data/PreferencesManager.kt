@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.data
+package pl.radoslawbialek.tutorial.zadania.data
 
 import android.content.Context
 import android.util.Log

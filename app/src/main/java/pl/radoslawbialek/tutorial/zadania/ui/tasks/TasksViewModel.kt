@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.ui.tasks
+package pl.radoslawbialek.tutorial.zadania.ui.tasks
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
@@ -8,12 +8,12 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import pl.radoslawbialek.notatnik.data.PreferencesManager
-import pl.radoslawbialek.notatnik.data.SortOrder
-import pl.radoslawbialek.notatnik.data.Task
-import pl.radoslawbialek.notatnik.data.TaskDao
-import pl.radoslawbialek.notatnik.ui.ADD_TASK_RESULT_OK
-import pl.radoslawbialek.notatnik.ui.EDIT_TASK_RESULT_OK
+import pl.radoslawbialek.tutorial.zadania.data.PreferencesManager
+import pl.radoslawbialek.tutorial.zadania.data.SortOrder
+import pl.radoslawbialek.tutorial.zadania.data.Task
+import pl.radoslawbialek.tutorial.zadania.data.TaskDao
+import pl.radoslawbialek.tutorial.zadania.ui.ADD_TASK_RESULT_OK
+import pl.radoslawbialek.tutorial.zadania.ui.EDIT_TASK_RESULT_OK
 
 class TasksViewModel @ViewModelInject constructor(
     private val taskDao: TaskDao,

@@ -1,11 +1,11 @@
-package pl.radoslawbialek.notatnik.ui.deleteallcompleted
+package pl.radoslawbialek.tutorial.zadania.ui.deleteallcompleted
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import pl.radoslawbialek.notatnik.data.TaskDao
-import pl.radoslawbialek.notatnik.di.ApplicationScope
+import pl.radoslawbialek.tutorial.zadania.data.TaskDao
+import pl.radoslawbialek.tutorial.zadania.di.ApplicationScope
 
 class DeleteAllCompletedViewModel @ViewModelInject constructor(
     private val taskDao: TaskDao,

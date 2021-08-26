@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.ui.tasks
+package pl.radoslawbialek.tutorial.zadania.ui.tasks
 
 import android.os.Bundle
 import android.view.Menu
@@ -20,11 +20,11 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import pl.radoslawbialek.notatnik.R
-import pl.radoslawbialek.notatnik.data.SortOrder
-import pl.radoslawbialek.notatnik.data.Task
-import pl.radoslawbialek.notatnik.util.exhaustive
-import pl.radoslawbialek.notatnik.util.onQueryTextChanged
+import pl.radoslawbialek.tutorial.R
+import pl.radoslawbialek.tutorial.zadania.data.SortOrder
+import pl.radoslawbialek.tutorial.zadania.data.Task
+import pl.radoslawbialek.tutorial.zadania.util.exhaustive
+import pl.radoslawbialek.tutorial.zadania.util.onQueryTextChanged
 
 @AndroidEntryPoint
 class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClickListener {

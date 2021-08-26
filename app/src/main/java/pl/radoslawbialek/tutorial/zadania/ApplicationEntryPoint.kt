@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik
+package pl.radoslawbialek.tutorial.zadania
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.util
+package pl.radoslawbialek.tutorial.zadania.util
 
 import androidx.appcompat.widget.SearchView
 

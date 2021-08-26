@@ -1,11 +1,11 @@
-package pl.radoslawbialek.notatnik.data
+package pl.radoslawbialek.tutorial.zadania.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import pl.radoslawbialek.notatnik.di.ApplicationScope
+import pl.radoslawbialek.tutorial.zadania.di.ApplicationScope
 import javax.inject.Inject
 import javax.inject.Provider
 

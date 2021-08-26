@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.ui
+package pl.radoslawbialek.tutorial.zadania.ui
 
 import android.app.Activity
 import android.os.Bundle
@@ -8,7 +8,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import dagger.hilt.android.AndroidEntryPoint
-import pl.radoslawbialek.notatnik.R
+import pl.radoslawbialek.tutorial.R
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

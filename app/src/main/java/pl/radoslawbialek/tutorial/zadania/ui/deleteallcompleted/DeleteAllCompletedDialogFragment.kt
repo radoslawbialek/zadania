@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.ui.deleteallcompleted
+package pl.radoslawbialek.tutorial.zadania.ui.deleteallcompleted
 
 import android.app.AlertDialog
 import android.app.Dialog

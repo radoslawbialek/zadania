@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.ui.edittask
+package pl.radoslawbialek.tutorial.zadania.ui.edittask
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
@@ -8,10 +8,10 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import pl.radoslawbialek.notatnik.data.Task
-import pl.radoslawbialek.notatnik.data.TaskDao
-import pl.radoslawbialek.notatnik.ui.ADD_TASK_RESULT_OK
-import pl.radoslawbialek.notatnik.ui.EDIT_TASK_RESULT_OK
+import pl.radoslawbialek.tutorial.zadania.data.Task
+import pl.radoslawbialek.tutorial.zadania.data.TaskDao
+import pl.radoslawbialek.tutorial.zadania.ui.ADD_TASK_RESULT_OK
+import pl.radoslawbialek.tutorial.zadania.ui.EDIT_TASK_RESULT_OK
 
 class EditTaskViewModel @ViewModelInject constructor(
     private val taskDao: TaskDao,

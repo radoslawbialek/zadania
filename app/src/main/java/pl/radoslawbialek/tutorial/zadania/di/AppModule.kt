@@ -1,4 +1,4 @@
-package pl.radoslawbialek.notatnik.di
+package pl.radoslawbialek.tutorial.zadania.di
 
 import android.app.Application
 import androidx.room.Room
@@ -8,7 +8,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
-import pl.radoslawbialek.notatnik.data.TaskDatabase
+import pl.radoslawbialek.tutorial.zadania.data.TaskDatabase
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
