@@ -21,18 +21,14 @@ abstract class TaskDatabase : RoomDatabase() {
             super.onCreate(db)
             val dao = database.get().taskDao()
             applicationScope.launch {
-                dao.insert(Task("Przykładowe pierwsze zadanie", priority = true))
-                dao.insert(Task("Przykładowe drugie zadanie", priority = true))
-                dao.insert(Task("Przykładowe trzecie zadanie", priority = true))
-                dao.insert(Task("Przykładowe czwarte zadanie", priority = true, completion = true))
-                dao.insert(Task("Przykładowe piąte zadanie", priority = true, completion = true))
-                dao.insert(Task("Przykładowe szóste zadanie", priority = true, completion = true))
-                dao.insert(Task("Przykładowe siódme zadanie", completion = true))
-                dao.insert(Task("Przykładowe ósme zadanie", completion = true))
-                dao.insert(Task("Przykładowe dziewiąte zadanie", completion = true))
-                dao.insert(Task("Przykładowe dziesiąte zadanie"))
-                dao.insert(Task("Przykładowe jedenaste zadanie"))
-                dao.insert(Task("Przykładowe dwunaste zadanie"))
+                dao.insert(Task("Zaktualizować aplikację w Google Play", priority = true))
+                dao.insert(Task("Sprawdzić oferty pracy", priority = true))
+                dao.insert(Task("Kupić 1kg witaminy C", priority = true, completion = true))
+                dao.insert(Task("Oddać książki do biblioteki", priority = true, completion = true))
+                dao.insert(Task("Sprzedać laptopa", priority = true, completion = true))
+                dao.insert(Task("Napisać artykuł o RecyclerView", completion = true))
+                dao.insert(Task("Zebrać informacje o Jetpack Compose"))
+                dao.insert(Task("Przejrzeć i usunąć stare e-maile"))
             }
         }
     }
